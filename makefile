@@ -1,8 +1,8 @@
 CC = g++
 CFLAGS = -g -Wall
 
-affixer: src/main.cpp noun.o
-	$(CC) $(CFLAGS) src/main.cpp noun.o -o affixer
+affixer: src/main.cpp word_loader.o
+	$(CC) $(CFLAGS) src/main.cpp src/word_loader.o -o affixer
 
-noun.o: src/noun.cpp
-	$(CC) $(CFLAGS) -c src/noun.cpp -o noun.o
+word_loader.o: src/noun.cpp
+	$(CC) $(CFLAGS) -c src/word_loader.cpp -o src/word_loader.o
