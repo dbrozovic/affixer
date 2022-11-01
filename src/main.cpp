@@ -55,6 +55,8 @@ int main(int argc, char **argv) {
             std::cout << "Incorrect. The correct answer was " << form.second << ".\n";
             incorrect++;
         }
+
+        i++;
     }
 
     std::cout << "You got " << correct << " out of " << correct + incorrect << ".\n";
